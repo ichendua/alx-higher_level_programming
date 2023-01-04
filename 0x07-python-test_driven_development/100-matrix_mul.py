@@ -6,11 +6,10 @@ This module contains a function that multiplies 2 matrices
 
 def matrix_mul(m_a, m_b):
     """This function multiplies two matrices
-    
     Args:
         m_a (list of lists of int/float): Matrix to be multiplied
         m_b (list of lists of int/float): Matrix to be multiplied
-    
+
     Raises:
         TypeError: If m_a or m_b is not a list
         TypeError: If m_a or m_b is not a list of lists
@@ -18,13 +17,12 @@ def matrix_mul(m_a, m_b):
         TypeError: If row of m_a or m_b are not the same size
         ValueError: If m_a or m_b is empty
         ValueError: If m_a and m_b cannot be multiplied
-    
+
     Returns:
         A new list which is the outcome of the multiplication
-    
 
     """
-    
+
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
     if not isinstance(m_b, list):
@@ -71,5 +69,5 @@ def matrix_mul(m_a, m_b):
                 product += row[m] * column[m]
             my_row.append(product)
         matrix2.append(my_row)
-    
+
     return matrix2

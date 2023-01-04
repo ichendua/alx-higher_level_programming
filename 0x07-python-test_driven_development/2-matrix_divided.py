@@ -8,7 +8,7 @@ This module defines a matrix division function
 
 def matrix_divided(matrix, div):
     """This function divides all elements of a matrix by a given number
-    
+
     Args:
         matrix: A list of lists (matrix)- members can be of type ints or floats
         div: Number to be used for the division (can be a float or an integer)
