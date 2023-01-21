@@ -460,3 +460,25 @@ class test_square(unittest.TestCase):
         list_squares_output = Square.load_from_file()
 
         self.assertEqual(r1.y, list_squares_output[0].y)
+
+    def test_display_square(self):
+        '''
+            Checking the stdout output by capturing it
+        '''
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+        r1 = Square(10)
+        r1.display()
+        sys.stdout = sys.__stdout__
+
+        output = ("##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n" +
+                  "##########\n")
+        self.assertEqual(capturedOutput.getvalue(), output)
